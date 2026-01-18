@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-primary: #06b6d4;
+  --color-primary-light: #22d3ee;
+  --color-primary-dark: #0891b2;
+  
+  --color-surface: #0f172a;
+  --color-surface-light: #1e293b;
+  --color-surface-lighter: #334155;
+  
+  --color-accent: #14b8a6;
+  --color-danger: #ef4444;
+  --color-success: #22c55e;
+}

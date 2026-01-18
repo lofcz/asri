@@ -1,0 +1,37 @@
+[package]
+name = "asri"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "asri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# ONNX Runtime for ASR inference with CUDA GPU acceleration
+ort = { version = "=2.0.0-rc.10", features = ["ndarray", "cuda"] }
+ndarray = "0.16"
+
+# Audio processing
+hound = "3.5"
+rubato = "0.16"
+symphonia = { version = "0.5", default-features = false, features = ["mp3", "ogg", "wav", "flac", "pcm", "isomp4", "aac"] }
+rustfft = "6.2"
+
+# Async and error handling
+tokio = { version = "1", features = ["sync", "rt"] }
+thiserror = "2"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
